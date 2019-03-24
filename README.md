@@ -4,7 +4,7 @@
 
 ```shell
   $ docker build . -t linux-asm
-  $ docker run -v /path/to/volume001:/vol -it --rm linux-asm /bin/ash
+  $ docker run -v /path/to/volume001:/vol -it --rm --cap-add=SYS_PTRACE --security-opt seccomp=unconfined linux-asm /bin/ash
 ```
 
 The docker options are:
