@@ -1,9 +1,11 @@
-= Linux assembler development in an alpine docker image
+# Linux assembler development in an alpine docker image
 
-== Start an alpine linux in docker:
+## Start an alpine linux in docker:
 
+```shell
   $ docker build . -t linux-asm
   $ docker run -v /path/to/volume001:/vol -it --rm linux-asm /bin/ash
+```
 
 The docker options are:
 
