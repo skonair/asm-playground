@@ -19,8 +19,8 @@ Some commands/use cases for gdb. For a complete list, see ftp://ftp.gnu.org/pub/
 
 Short cmd | Long cmd | Description
 ----------|----------|------------
-l | | lists the program code
-b | break <line> | sets a break point at line numer <line>
+l | list &lt;startline&gt; | lists the program code starting from line <startline>
+b | break &lt;line&gt; | sets a break point at line numer <line>
 i b | info break | shows info about current breakpoints
 r | run | runs the programm
 i r | info registers | prints all register
