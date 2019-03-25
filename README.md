@@ -7,11 +7,15 @@
   $ docker run -v /path/to/volume001:/vol -it --rm --cap-add=SYS_PTRACE --security-opt seccomp=unconfined linux-asm /bin/ash
 ```
 
+To run the gdb debugger we need to bypass several docker security options. So this configuration must only be used as a local development environment.
 The docker options are:
 
-- /bin/ash is Ash (Almquist Shell) provided by BusyBox
-- --rm Automatically remove the container when it exits (docker run --help)
+- -v bind mount the local volume /path/to/volume001 to the container directory /vol
 - -i Interactive mode (Keep STDIN open even if not attached)
 - -t Allocate a pseudo-TTY
+- --rm Automatically remove the container when it exits (docker run --help)
+- --cap-add=SYS_PTRACE Allow container users to trace syscalls from their own processes. Required for debugging with gdb
+- --security-opt seccomp=unconfined The default docker seccomp profile whitelists system calls. For debugging with gdb we need more, so we use all. This is usually a security breach. Please don't do it on a production docker.
+- /bin/ash is Ash (Almquist Shell) provided by BusyBox
 
 
