@@ -9,6 +9,11 @@ Link the object file into an executable
   $ ld -o eatsyscall eatsyscall.o
 ```
 
+Or simply call make to execute the rules in the Makefile
+```shell
+  $ make
+```
+
 Use gdb
 
 ```shell
