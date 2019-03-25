@@ -1,23 +1,28 @@
 Compile the assembler file and create an elf64 (for 64bit; elf for 32bit) object file. 
   
+```shell
   $ nasm -f elf64 -g -F stabs eatsyscall.asm
-
+```
 Link the object file into an executable
 
+```shell
   $ ld -o eatsyscall eatsyscall.o
-
+```
 
 Use gdb
 
+```shell
   $ gdb eatsyscall
+```
 
-Some commands/use cases for gdb:
+Some commands/use cases for gdb. For a complete list, see ftp://ftp.gnu.org/pub/old-gnu/Manuals/gdb/html_node/gdb_toc.html
 
 Short cmd | Long cmd | Description
 ----------|----------|------------
 l | | lists the program code
- | break <line> | sets a break point at line numer <line>
-r | | runs the programm
+b | break <line> | sets a break point at line numer <line>
+i b | info break | shows info about current breakpoints
+r | run | runs the programm
 i r | info registers | prints all register
 i r eax | info registers eax | print register eax
 s | step | to do next step
