@@ -12,16 +12,18 @@ Use gdb
   $ gdb eatsyscall
 
 Some commands/use cases for gdb:
-  l - lists the program code
-  break <line> - sets a break point at line numer <line>
-  r - runs the programm
-  i r - (or info registers) prints all register
-  i r eax - print register eax
-  s - (or step) to do next step
-  n - (or next) to execute the entire function
-  c - (or continue) run until end, crash or breakpoint
-  si - (or stepi) to execute one machine instruction, then stop. e.g. assembler programs
-      --> it is very useful to type 'display/i $pc', then the current instruction is always displayed
-  ni - (or nexti) to execute one machine instruction, if it is a function call, proceed until it returns
+
+Short cmd | Long cmd | Description
+----------|----------|------------
+l | | lists the program code
+ | break <line> | sets a break point at line numer <line>
+r | | runs the programm
+i r | info registers | prints all register
+i r eax | info registers eax | print register eax
+s | step | to do next step
+n | next | to execute the entire function
+c | continue | run until end, crash or breakpoint
+si | stepi |  to execute one machine instruction, then stop. e.g. assembler programs --> it is very useful to type 'display/i $pc', then the current instruction is always displayed
+ni | nexti | to execute one machine instruction, if it is a function call, proceed until it returns
 
 
