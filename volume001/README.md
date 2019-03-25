@@ -1,6 +1,7 @@
 Compile the assembler file and create an elf64 (for 64bit; elf for 32bit) object file. 
   
 ```shell
+  $ cd eatsyscall/
   $ nasm -f elf64 -g -F stabs eatsyscall.asm
 ```
 Link the object file into an executable
@@ -11,6 +12,7 @@ Link the object file into an executable
 
 Or simply call make to execute the rules in the Makefile
 ```shell
+  $ cd eatsyscall/
   $ make
 ```
 
