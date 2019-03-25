@@ -35,5 +35,6 @@ n | next | to execute the entire function
 c | continue | run until end, crash or breakpoint
 si | stepi |  to execute one machine instruction, then stop. e.g. assembler programs --> it is very useful to type 'display/i $pc', then the current instruction is always displayed
 ni | nexti | to execute one machine instruction, if it is a function call, proceed until it returns
+x | examine &lt;addr&gt; | examine memory in several formats, e.g. 'x/10xb' (display next 10 memory units as hex in unit byte)
 
 
