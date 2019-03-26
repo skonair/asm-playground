@@ -4,13 +4,13 @@
 
 ```shell
   $ docker build . -t linux-asm
-  $ docker run -v /path/to/volume001:/vol -it --rm --cap-add=SYS_PTRACE --security-opt seccomp=unconfined linux-asm /bin/ash
+  $ docker run -v `pwd`/vol:/vol -it --rm --cap-add=SYS_PTRACE --security-opt seccomp=unconfined linux-asm /bin/ash
 ```
 
 To run the gdb debugger we need to bypass several docker security options. So this configuration must only be used as a local development environment.
 The docker options are:
 
-- -v bind mount the local volume /path/to/volume001 to the container directory /vol
+- -v bind mount the local volume `pwd`/vol to the container directory /vol
 - -i Interactive mode (Keep STDIN open even if not attached)
 - -t Allocate a pseudo-TTY
 - --rm Automatically remove the container when it exits (docker run --help)
