@@ -1,5 +1,7 @@
 # Linux assembler development in an alpine docker image
 
+Refreshing/learning assembler development on Linux with the really nice book 'Assembly Language Step-by-Step' from Jeff Duntemann.
+
 ## Start an alpine linux in docker:
 
 ```shell
